@@ -3,17 +3,23 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Route,Routes } from "react-router-dom";
 import TopBar from "./Scenes/global/TopBar";
 import SideBar from "./Scenes/global/SideBar";
+import Dashboard from "./Scenes/dashboard";
+import { useState } from "react";
 
 function App() {
   const [theme, colorMode] = useMode();
-
+  const [isSidebar, setIsSidebar] = useState(true);
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div className="App">
+        <div className="app">
+        <SideBar isSidebar={isSidebar} />
           <main className="content">
-            <TopBar />
+          <TopBar setIsSidebar={setIsSidebar} />
+          <Routes>
+              <Route path="/" element={<Dashboard />} />
+          </Routes>
           </main>
         </div>
       </ThemeProvider>
