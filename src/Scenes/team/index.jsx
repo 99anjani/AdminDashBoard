@@ -78,15 +78,27 @@ const Team = () => {
             <Box
                 m="40px 0 0 0"
                 height="70vh"
-            >
-                <DataGrid rows={mockDataTeam} columns={column} 
-                initialState={{
-                pagination: {
-                    paginationModel: {
-                    pageSize: 8,
+                sx={{
+                    "& .MuiDataGrid-footerContainer": {
+                    borderTop: "none",
+                    backgroundColor: colors.blueAccent[700],
                     },
-                },
+                    "& .MuiDataGrid-columnHeaders": {
+                      backgroundColor: colors.blueAccent[700],
+                      borderBottom: "none",
+                    },
                 }}
+            >
+                <DataGrid 
+                    rows={mockDataTeam} 
+                    columns={column} 
+                    initialState={{
+                        pagination: {
+                            paginationModel: {
+                            pageSize: 8,
+                            },
+                        },
+                    }}
                 />
             </Box>
         </Box>
