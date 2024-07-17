@@ -73,7 +73,7 @@ const Team = () => {
         <Box m="20px">
             <Header
                 title="CONTACTS"
-                subtitle="List of contacts for future reference"
+                subtitle="List of Team Contacts for Future Reference"
             />
             <Box
                 m="40px 0 0 0"
