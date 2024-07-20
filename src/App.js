@@ -10,6 +10,7 @@ import Invoices from "./Scenes/invoices";
 import Contacts from "./Scenes/contacts";
 import Form from "./Scenes/form";
 import Calendar from "./Scenes/calendar";
+import FAQ from "./Scenes/faq";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -29,6 +30,7 @@ function App() {
               <Route path="/contacts" element={<Contacts/>}/>
               <Route path="/form" element={<Form/>}/>
               <Route path="/calender" element={<Calendar/>}/>
+              <Route path="/faq" element={<FAQ/>}/>
           </Routes>
           </main>
         </div>
