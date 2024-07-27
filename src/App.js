@@ -14,6 +14,7 @@ import FAQ from "./Scenes/faq";
 import Bar from "./Scenes/bar";
 import Pie from "./Scenes/pie";
 import Line from "./Scenes/line";
+import Geo from "./Scenes/geo";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
               <Route path="/bar" element={<Bar/>}/>
               <Route path="/pie" element={<Pie/>}/>
               <Route path="/line" element={<Line/>}/>
+              <Route path="/geography" element={<Geo/>}/>
           </Routes>
           </main>
         </div>
