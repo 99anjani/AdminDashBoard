@@ -3,11 +3,11 @@ import { ResponsiveBar } from "@nivo/bar";
 import { mockBarData as data } from "../Data/mockData";
 import { tokens } from "../theme";
 
-const BarChart = () => {
+const BarChart = ({ isDashboard = false }) => {
     const theme = useTheme();
     const colors=tokens(theme.palette.mode)
     return (
-        <Box height={500} width="90%">
+        
             <ResponsiveBar
                 data={data}
                 theme={{
@@ -123,7 +123,7 @@ const BarChart = () => {
                     return e.id + ": " + e.formattedValue + " in country: " + e.indexValue;
                 }}
             />
-        </Box>
+
     );
 };
 
